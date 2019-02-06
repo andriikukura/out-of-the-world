@@ -1,0 +1,209 @@
+$red: #c84d4d;
+
+
+@font-face {
+    font-family: 'TrumpGothicEastBold';
+    src: url('../fonts/TrumpGothicEastBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #c5c5c5; 
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.slider {
+    background-color: #fff;
+    padding: 25px;
+    height: auto;
+    -webkit-box-shadow: 2px 18px 49px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 18px 49px -9px rgba(0,0,0,0.75);
+box-shadow: 2px 18px 49px -9px rgba(0,0,0,0.75);
+    &-wrapper {
+        
+    }
+    &-info {
+        &__wrapper {
+            padding: 1rem 0;
+        }
+    }
+    
+    &-image {
+        &__wrapper {
+            height: 100%;
+            
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                
+                
+            }
+        }
+    }
+
+    &-stars {
+        padding-left: 3.5rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        &__item {
+            text-decoration: none;
+            color: #e6e7e7;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    &-title {
+        color: $red;
+        font-size: 102px;
+        font-family: 'TrumpGothicEastBold', sans-serif;
+        text-transform: uppercase;
+        line-height: 1;
+        position: relative;
+        right: 65px;
+
+        
+    }
+
+    &-text {
+       margin-top: 2rem; 
+       line-height: 22px;
+    }
+
+    &-ctn {
+        text-transform: uppercase;
+        color: $red;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 0.2rem;
+        &:hover {
+            text-decoration: none;
+            color: lighten($red, 15%);
+        }
+    }
+}
+
+.counter {
+    font-size: 100px;
+    font-weight: bold;
+    color: #f4f4f4;
+    display: inline-block;
+    position: absolute;
+    right: -60px;
+    bottom: -30px;
+    
+   &:before {
+       content: '0';
+       font-size: 100px;
+       font-weight: bold;
+       color: #f4f4f4;
+       display: inline-block;
+       
+     
+   }
+
+}
+
+
+
+/*Slider*/
+
+.slick-dots {
+
+}
+.slick-dots li:before {
+    content: '0';
+}
+.slick-dots li {
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+li.slick-active {
+    color: #000;
+}
+
+.slick-dotted.slick-slider {
+    margin: 0;
+}
+
+/*Media*/
+
+@media (max-width: 575.98px) {  }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .slider-title {
+        font-size: 50px;
+        right: 0;
+    }
+    .slider-stars {
+        padding-left: 0;
+        margin: 1rem 0;
+    }
+    .slider-ctn {
+        
+    }
+    .slick-dots {
+        flex-direction: row;
+        bottom: 0;
+        left: 27%;
+    }
+    .slick-dots li {
+        padding: 0 1rem !important;
+    }
+
+    .counter {
+        font-size: 50px !important;
+        right: 20px !important;
+        bottom: -15px;
+        &:before {
+            font-size: 50px !important;
+            right: 20px;
+            bottom: -15px;
+        }
+    }
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .counter {
+        font-size: 80px;
+        right: -40px;
+        bottom: -15px;
+
+        &:before {
+            font-size: 80px;
+        }
+    }
+    .slider-title {
+        font-size: 50px;
+    }
+    .slider-text {
+        margin-top: 0;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+    .slick-dots li {
+        font-weight: bold;
+        padding: 0.3rem 0;
+    }
+
+    .slick-slider .slick-track, .slick-slider .slick-list {
+        height: none;
+    }
+    .slick-dots {
+        top: 25%;
+    }
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
